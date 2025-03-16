@@ -20,7 +20,6 @@ const login = (username, password) => {
     (username === "moomoo" && password === "farm")
   ) {
     return true;
-    console.log("True");
   }
   return false;
 };
