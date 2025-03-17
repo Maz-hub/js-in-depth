@@ -12,5 +12,11 @@
 const row = [10, 20, 30, 40, 50];
 
 const matrix = row.map((e) => {
-    return e[];
+    const array = [];
+    array.push(e)
+    return array;
 })
+
+console.log(matrix);
+
+// return[e];
