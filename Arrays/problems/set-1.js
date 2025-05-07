@@ -11,3 +11,14 @@
 
 BONUS: Try to see if you can make it so that all you need to change is the "multiple" variable and the program still works correctly.
 */
+
+
+let multiple = 50;
+let arr = [10 , 11, 12, 13, 14, 15];
+
+for (let i = 0; i < arr.length; i++) {
+    let number = arr[i];
+    let result = number * multiple;
+    
+    console.log(`${number} x ${multiple} = ${result}`)
+}
