@@ -1,3 +1,5 @@
+const generateDeck = () => {
+
 // create an empty deck to store
 const deck = [];
 
@@ -8,7 +10,17 @@ const deck = [];
 
  // go throught an array / list of things ? Use a loop
 
+
  for (const card of cards) {
-    
+    for (const suit of suits) {
+        // {card: "King", suit: "Hearts"}
+        deck.push({card: card, suit: suit})
+    }
  }
+ return deck;
+ }
+
+ const deck = generateDeck();
+ console.log(deck);
+
 
