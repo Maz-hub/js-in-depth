@@ -32,15 +32,59 @@ const generateDeck = () => {
   return deck;
 };
 
-const deck = generateDeck();
+const myDeck = generateDeck();
 
-const drawCard = () => {
+const drawCard = (deck) => {
     const randomIndex = Math.floor(Math.random() * deck.length); // generate a random number
     const card = deck[randomIndex]; // go to the deck and pull out that card
     deck.splice(randomIndex, 1); // permanently change the deck to remove that card from the deck, so it can't be drawn again by shifting all the indexes as well
     return card; // return the card that we pulled out, so that we have access to it. 
 }
-const myCard = drawCard();
-console.log(myCard);
-console.log(deck.length);
+
+const playerHand = [];
+const dealerHand = [];
+
+playerHand.push(drawCard(myDeck));
+playerHand.push(drawCard(myDeck));
+dealerHand.push(drawCard(myDeck));
+dealerHand.push(drawCard(myDeck));
+
+//console.log(playerHand);
+//console.log(dealerHand);
+
+const checkScore = (hand) => {
+  let total = 0;
+
+    for(const cardObject of hand) {
+      // check if it's jack, queen, king
+      if (cardObject.card === 'King') {
+        total += 10;
+      }
+      else if (cardObject.card === 'Queen') {
+        total += 10;
+      }
+      else if (cardObject.card === 'Jack') {
+        total += 10;
+      }
+      // check if it's ace
+      else if (cardObject.card === 'Ace') {
+        total += 1;
+      }
+      // otherwise it's 2 to 10
+      else {
+        total += Number(cardObject.card);
+      }
+    }
+
+    console.log(total);
+};
+
+console.log(playerHand);
+checkScore(playerHand);
+
+//const myCard = drawCard(myDeck);
+// console.log(myCard);
+// console.log(myDeck.length);
+
+
 
