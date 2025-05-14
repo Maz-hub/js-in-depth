@@ -79,8 +79,16 @@ const checkScore = (hand) => {
     console.log(total);
 };
 
-console.log(playerHand);
-checkScore(playerHand);
+while (true) {
+  // deal player card
+  playerHand.push(drawCard(myDeck))
+  // check if player bust -> over 21
+  // check if player 21
+
+  // deal dealer card
+  // check if dealer bust -> over 21
+  // check if dealer 21
+}
 
 //const myCard = drawCard(myDeck);
 // console.log(myCard);
