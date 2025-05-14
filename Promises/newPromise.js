@@ -6,8 +6,11 @@ const myPromise = new Promise((resolve, reject) => {
 
 console.log('Hello...???');
 
+console.log(myPromise);
+
 // console.log outcome:
 // Hello...???
+// Promise { <pending> }
 // Hello, my friend!
 
 // As soon as the promise is created, it's immediatly pending
