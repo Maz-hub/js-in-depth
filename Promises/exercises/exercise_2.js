@@ -27,7 +27,10 @@ myPromise.then(() => {
 .then(() => {
     return new Promise ((resolve, reject) => {
         setTimeout(() => {
-            console.log("Step 2 complete");
+            resolve("Step 2 complete");
         }, 3000)
     })
+})
+.then((message) => {
+    console.log(message)
 })
