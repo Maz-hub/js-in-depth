@@ -2,7 +2,7 @@ const message = "Hi";
 
 try {
     console.log(message);
-    throw "Boom!"
+    throw new Error ("Boom!")
 } catch (e) {
     console.error(e); // Boom !
     console.error(message)
@@ -10,6 +10,6 @@ try {
 
 /*
 Hi
-Boom!
+Error: Boom!
 Hi
 */
