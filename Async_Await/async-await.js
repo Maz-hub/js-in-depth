@@ -32,8 +32,14 @@ fetchStuff();
 
 console.log("Program complete") // 2
 
+// Order of console.logs
 /*
-Program starting...
-Program complete
-All done!
+const useData = async () => {
+    console.log("Fetching some data..."); --> 2
+    const result = await fetchSomeData();
+    console.log(result); --> 4
+    }
+    console.log("Program started"); --> 1
+    useData();
+    console.log("All done!";) --> 3
 */
