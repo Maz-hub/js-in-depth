@@ -21,7 +21,7 @@ const fetchPokemon = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             // resolve({ data: {name: "Pickachu", power: 20} });
-            reject("Danger, danger!")
+            reject( new Error ("Danger, danger!"))
         }, 2000)
     });
 }
@@ -31,7 +31,7 @@ const pokemon = async() => {
       const result = await fetchPokemon();
     console.log(result);  
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
     
 }
