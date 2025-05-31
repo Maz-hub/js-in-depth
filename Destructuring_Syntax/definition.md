@@ -19,7 +19,8 @@ const age = user.age;
 const { name, age } = user;
 
 
-// Array Destructuring
+## 📦 Array Destructuring
+
 const colors = ["blue", "green", "purple"];
 
 // Destructuring ✅
@@ -28,8 +29,8 @@ const [firstColor, secondColor] = colors;
 console.log(firstColor); // "blue"
 console.log(secondColor); // "green"
 
+## Real Use Case
 
-// Real Use Case
 const response = { data: { user: "Monkey", admin: true } };
 
 // Instead of:
